@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>robot_onboard_launch</name>
+  <version>0.0.0</version>
+  <description>Launch file for setting up the robot's onboard packages</description>
+  <maintainer email="37396126+KMcNickel@users.noreply.github.com">kyle</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <exec_depend>odrive</exec_depend>
+  <exec_depend>socketcan</exec_depend>
+  <exec_depend>mecanum_kinematics</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
