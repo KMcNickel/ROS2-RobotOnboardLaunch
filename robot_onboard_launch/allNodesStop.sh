@@ -8,3 +8,4 @@ ros2 lifecycle set /agv0/axis2/odrive shutdown
 ros2 lifecycle set /agv0/axis3/odrive shutdown
 ros2 lifecycle set /agv0/inverse_kinematics shutdown
 ros2 lifecycle set /agv0/forward_kinematics shutdown
+ros2 lifecycle set /agv0/battery shutdown

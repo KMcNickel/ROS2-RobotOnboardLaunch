@@ -15,6 +15,7 @@
   <exec_depend>odrive</exec_depend>
   <exec_depend>socketcan</exec_depend>
   <exec_depend>mecanum_kinematics</exec_depend>
+  <exec_depend>battery_monitor</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>

@@ -6,6 +6,7 @@ from launch.substitutions import PathJoinSubstitution, TextSubstitution
 
 deviceName = 'agv0'
 canbusInterfaceName = 'can0'
+batteryMonitorSerialPortName = 'ttyS0'
 
 odriveCalibrationType = '0'
 
@@ -118,6 +119,20 @@ def generate_launch_description():
                 'wheel_base_length': wheelBaseLength,
                 'wheel_radius': wheelRadius,
                 'invert_right': invertRight
+            }.items()
+        ),
+    # Battery Monitor
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([
+                PathJoinSubstitution([
+                    FindPackageShare('battery_monitor'),
+                    'launch',
+                    'battery_monitor_launch.py'
+                ])
+            ]),
+            launch_arguments = {
+                'device_name': deviceName,
+                'serial_port_name': batteryMonitorSerialPortName
             }.items()
         )
     ])
