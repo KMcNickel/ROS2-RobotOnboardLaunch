@@ -6,15 +6,18 @@ from launch.substitutions import PathJoinSubstitution, TextSubstitution
 
 deviceName = 'agv0'
 canbusInterfaceName = 'can0'
-frontLeftAxisNum = 0
-frontRightAxisNum = 1
-rearLeftAxisNum = 3
-rearRightAxisNum = 2
 
-wheelBaseWidth = 0.27178
-wheelBaseLength = 0.181356
-wheelRadius = 0.04064
-invertRight = True
+odriveCalibrationType = '0'
+
+frontLeftAxisNum = '0'
+frontRightAxisNum = '1'
+rearLeftAxisNum = '3'
+rearRightAxisNum = '2'
+
+wheelBaseWidth = '0.27178'
+wheelBaseLength = '0.181356'
+wheelRadius = '0.04064'
+invertRight = 'True'
 
 def generate_launch_description():
     return LaunchDescription([
@@ -44,7 +47,8 @@ def generate_launch_description():
             launch_arguments = {
                 'device_name': deviceName,
                 'canbus_interface_name': canbusInterfaceName,
-                'axis_number': frontLeftAxisNum
+                'axis_number': frontLeftAxisNum,
+                'calibration_type': odriveCalibrationType
             }.items()
         ),
     # ODrive Front Right
@@ -59,7 +63,8 @@ def generate_launch_description():
             launch_arguments = {
                 'device_name': deviceName,
                 'canbus_interface_name': canbusInterfaceName,
-                'axis_number': frontRightAxisNum
+                'axis_number': frontRightAxisNum,
+                'calibration_type': odriveCalibrationType
             }.items()
         ),
     # ODrive Rear Left
@@ -74,7 +79,8 @@ def generate_launch_description():
             launch_arguments = {
                 'device_name': deviceName,
                 'canbus_interface_name': canbusInterfaceName,
-                'axis_number': rearLeftAxisNum
+                'axis_number': rearLeftAxisNum,
+                'calibration_type': odriveCalibrationType
             }.items()
         ),
     # ODrive Rear Right
@@ -89,7 +95,8 @@ def generate_launch_description():
             launch_arguments = {
                 'device_name': deviceName,
                 'canbus_interface_name': canbusInterfaceName,
-                'axis_number': rearRightAxisNum
+                'axis_number': rearRightAxisNum,
+                'calibration_type': odriveCalibrationType
             }.items()
         ),
     # Kinematics
