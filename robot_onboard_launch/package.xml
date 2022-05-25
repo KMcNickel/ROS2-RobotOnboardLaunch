@@ -4,7 +4,7 @@
   <name>robot_onboard_launch</name>
   <version>0.0.0</version>
   <description>Launch file for setting up the robot's onboard packages</description>
-  <maintainer email="37396126+KMcNickel@users.noreply.github.com">kyle</maintainer>
+  <maintainer email="37396126+KMcNickel@users.noreply.github.com">KMcNickel</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
