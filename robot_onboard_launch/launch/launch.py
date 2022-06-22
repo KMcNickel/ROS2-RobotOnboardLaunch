@@ -133,6 +133,7 @@ def generate_launch_description():
             ]),
             launch_arguments = {
                 'device_name': deviceName,
+                'canbus_interface_name': canbusInterfaceName,
                 'can_id': batteryMonitorCanId
             }.items()
         )
