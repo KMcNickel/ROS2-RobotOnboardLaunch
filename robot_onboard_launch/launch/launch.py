@@ -6,7 +6,6 @@ from launch.substitutions import PathJoinSubstitution, TextSubstitution
 
 deviceName = 'agv0'
 canbusInterfaceName = 'can0'
-batteryMonitorSerialPortName = 'ttyS0'
 
 odriveCalibrationType = '0'
 
@@ -14,6 +13,8 @@ frontLeftAxisNum = '0'
 frontRightAxisNum = '1'
 rearLeftAxisNum = '3'
 rearRightAxisNum = '2'
+
+batteryMonitorCanId = '4'
 
 wheelBaseWidth = '0.27178'
 wheelBaseLength = '0.181356'
@@ -132,7 +133,7 @@ def generate_launch_description():
             ]),
             launch_arguments = {
                 'device_name': deviceName,
-                'serial_port_name': batteryMonitorSerialPortName
+                'can_id': batteryMonitorCanId
             }.items()
         )
     ])
