@@ -15,6 +15,7 @@ rearLeftAxisNum = '3'
 rearRightAxisNum = '2'
 
 batteryMonitorCanId = '4'
+DWM1001CanId = '5'
 
 wheelBaseWidth = '0.27178'
 wheelBaseLength = '0.181356'
@@ -135,6 +136,21 @@ def generate_launch_description():
                 'device_name': deviceName,
                 'canbus_interface_name': canbusInterfaceName,
                 'can_id': batteryMonitorCanId
+            }.items()
+        ),
+    # DWM1001
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([
+                PathJoinSubstitution([
+                    FindPackageShare('dwm1001_can'),
+                    'launch',
+                    'dwm1001_can_launch.py'
+                ])
+            ]),
+            launch_arguments = {
+                'device_name': deviceName,
+                'canbus_interface_name': canbusInterfaceName,
+                'can_id': DWM1001CanId
             }.items()
         )
     ])

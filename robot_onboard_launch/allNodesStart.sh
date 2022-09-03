@@ -10,6 +10,7 @@ ros2 lifecycle set /agv0/axis3/odrive configure
 ros2 lifecycle set /agv0/inverse_kinematics configure
 ros2 lifecycle set /agv0/forward_kinematics configure
 ros2 lifecycle set /agv0/battery configure
+ros2 lifecycle set /agv0/dwm1001 configure
 
 echo "Activating"
 ros2 lifecycle set /agv0/can0/receiver activate
@@ -21,6 +22,7 @@ ros2 lifecycle set /agv0/axis3/odrive activate
 ros2 lifecycle set /agv0/inverse_kinematics activate
 ros2 lifecycle set /agv0/forward_kinematics activate
 ros2 lifecycle set /agv0/battery activate
+ros2 lifecycle set /agv0/dwm1001 activate
 
 echo "Clearing Errors"
 ros2 service call /agv0/axis0/input/clearErrors std_srvs/srv/Trigger
